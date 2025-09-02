@@ -1,0 +1,824 @@
+  [1m[35m (299.9ms)[0m  [1m[35mCREATE DATABASE "family_habit_development" ENCODING = 'unicode' /*application='Backend'*/[0m
+  [1m[35m (289.9ms)[0m  [1m[35mCREATE DATABASE "family_habit_development" ENCODING = 'unicode' /*application='Backend'*/[0m
+  [1m[35m (268.0ms)[0m  [1m[35mCREATE DATABASE "family_habit_development" ENCODING = 'unicode' /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35m (278.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "family_habit_development" /*application='Backend'*/[0m
+  [1m[35m (276.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "family_habit_test" /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35m (92.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "family_habit_development" /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35m (224.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "family_habit_test" /*application='Backend'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35m (3295.3ms)[0m  [1m[35mCREATE DATABASE "family_habit_development" ENCODING = 'unicode' /*application='Backend'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35m (519.2ms)[0m  [1m[35mCREATE DATABASE "family_habit_test" ENCODING = 'unicode' /*application='Backend'*/[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Backend'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2868395704988897475) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 05:50:04.943107', '2025-09-01 05:50:04.943110') RETURNING "key" /*application='Backend'*/[0m
+Migrating to CreateUsers (20250831)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "user_name" character varying, "email" character varying, "phone_number" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250831') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2868395704988897475) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Started POST "/users" for ::1 at 2025-09-01 08:03:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Test", "lastName" => "User", "userName" => "testuser", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 18.2ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:05:07 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Test", "lastName" => "User", "userName" => "testuser", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:06:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Test", "lastName" => "User", "userName" => "testuser", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 19.2ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:06:12 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Test", "lastName" => "User", "userName" => "testuser", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:08:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Test", "last_name" => "User", "user_name" => "testuser", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002761f954600>, params: {"user" => {"first_name" => "Test", "last_name" => "User", "user_name" => "testuser", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 569ms (Views: 0.7ms | ActiveRecord: 25.7ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:10:35 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Logan", "lastName" => "Stoltz", "userName" => "logan123", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:12:58 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"firstName" => "Logan", "lastName" => "Stoltz", "userName" => "logan123", "email" => "[FILTERED]", "phoneNumber" => "1234567890", "password" => "[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.)
+Caused by: NoMethodError (undefined method 'firstName=' for an instance of User)
+
+Information for: ActiveModel::UnknownAttributeError (unknown attribute 'firstName' for User.):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+
+Information for cause: NoMethodError (undefined method 'firstName=' for an instance of User):
+  
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:13:43 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000002762421a510>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 195ms (Views: 0.3ms | ActiveRecord: 4.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:14:10 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000027624692ef8>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 195ms (Views: 0.3ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:14:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000027624d01230>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 202ms (Views: 0.5ms | ActiveRecord: 8.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:15:23 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00000276262ded00>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 196ms (Views: 0.4ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:16:08 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000027625fd3020>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 195ms (Views: 0.4ms | ActiveRecord: 4.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:18:28 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+[31mUnpermitted parameters: :first_name, :last_name, :user_name, :phone_number. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000027625e74a80>, params: {"user" => {"first_name" => "Logan", "last_name" => "Stoltz", "user_name" => "logan123", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}, "controller" => "users", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'logan@example.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 198ms (Views: 0.4ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:21:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {}}
+Completed 400 Bad Request in 15ms (ActiveRecord: 220.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:21:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-01 08:26:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "LOGAN", "last_name" => "STOLTZ", "user_name" => "lstoltz", "email" => "[FILTERED]", "phone_number" => "7752760061", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Loganstoltz1234@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('LOGAN', 'STOLTZ', 'lstoltz', 'Loganstoltz1234@gmail.com', '7752760061', '$2a$12$dRdm5VMy0lPZRW1SyJ7iJeqajG1YOHngQl9Iy1Z/dBMIq5Zr0G1ti', '2025-09-01 15:26:54.334391', '2025-09-01 15:26:54.334391') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 323ms (Views: 0.9ms | ActiveRecord: 24.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:32:03 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "Madison", "last_name" => "Stoltz", "user_name" => "MStoltz", "email" => "[FILTERED]", "phone_number" => "5095702560", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'madisonbrown543@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('Madison', 'Stoltz', 'MStoltz', 'madisonbrown543@gmail.com', '5095702560', '$2a$12$QMg5m29DmRPSGZ6IRehumeh/U9rnpC/URkpdosghKU018gTFnZmQ.', '2025-09-01 15:32:03.630597', '2025-09-01 15:32:03.630597') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 199ms (Views: 0.6ms | ActiveRecord: 4.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:35:26 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "Cillian", "last_name" => "Stoltz", "user_name" => "CStoltz", "email" => "[FILTERED]", "phone_number" => "5095702560", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Loganstoltz1234@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 422 Unprocessable Content in 206ms (Views: 0.5ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 08:35:35 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "Cillian", "last_name" => "Stoltz", "user_name" => "CStoltz", "email" => "[FILTERED]", "phone_number" => "5095702560", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Loganstoltz18@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('Cillian', 'Stoltz', 'CStoltz', 'Loganstoltz18@gmail.com', '5095702560', '$2a$12$3z29oAnf24hyoBMKIe0IFOquOBj2Ne5EZYzHGjpfm/Zb/WhPP744a', '2025-09-01 15:35:35.275353', '2025-09-01 15:35:35.275353') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 203ms (Views: 0.6ms | ActiveRecord: 5.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:44:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:45:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:46:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:47:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started POST "/users" for ::1 at 2025-09-01 08:48:12 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "bob", "last_name" => "dempki", "user_name" => "BDempki", "email" => "[FILTERED]", "phone_number" => "1234567890", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'BDempki1234@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('bob', 'dempki', 'BDempki', 'BDempki1234@gmail.com', '1234567890', '$2a$12$6GS/C6odpa.xSzGph8voSOp7Rf1kKCcDiGaDyIffoouPVThJzrnTi', '2025-09-01 15:48:12.598207', '2025-09-01 15:48:12.598207') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 300ms (Views: 0.4ms | ActiveRecord: 13.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/user" for ::1 at 2025-09-01 08:48:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:48:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:48:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:48:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:48:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:50:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:51:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:51:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:51:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:51:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 08:52:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 09:58:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:20:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:25:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:25:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:26:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:26:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:29:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:29:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:29:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:29:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:35:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:42:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started POST "/login" for ::1 at 2025-09-01 10:42:17 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user" => {"user_name" => "CStoltz", "password" => "[FILTERED]"}, "session" => {"user" => {"user_name" => "CStoltz", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 401 Unauthorized in 218ms (Views: 0.1ms | ActiveRecord: 8.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:42:25 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user" => {"user_name" => "BDempki", "password" => "[FILTERED]"}, "session" => {"user" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:42:28 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}, "session" => {"user" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 401 Unauthorized in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 10:43:11 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "LOGAN", "last_name" => "STOLTZ", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "7752760061", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ls@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('LOGAN', 'STOLTZ', '1', 'ls@gmail.com', '7752760061', '$2a$12$BlK6.igtvwDpGUqz69V1XOgt45Y0056u3hnpae.g7D.rtflJErDiu', '2025-09-01 17:43:12.155651', '2025-09-01 17:43:12.155651') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 203ms (Views: 0.5ms | ActiveRecord: 5.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:43:16 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user" => {"user_name" => "1", "password" => "[FILTERED]"}, "session" => {"user" => {"user_name" => "1", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:43:18 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user" => {"user_name" => "1", "password" => "[FILTERED]"}, "session" => {"user" => {"user_name" => "1", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 401 Unauthorized in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:45:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "1", "password" => "[FILTERED]", "session" => {"user_name" => "1", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = '1' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 497ms (Views: 1.2ms | ActiveRecord: 22.8ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/user" for ::1 at 2025-09-01 10:45:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:45:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started POST "/login" for ::1 at 2025-09-01 10:45:46 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 193ms (Views: 0.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/user" for ::1 at 2025-09-01 10:45:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started GET "/api/user" for ::1 at 2025-09-01 10:45:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+Started POST "/login" for ::1 at 2025-09-01 10:47:05 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 193ms (Views: 0.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:47:45 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 195ms (Views: 0.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:51:23 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 194ms (Views: 0.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:52:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 380ms (Views: 1.5ms | ActiveRecord: 23.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:53:21 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 211ms (Views: 0.5ms | ActiveRecord: 4.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:55:14 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 191ms (Views: 0.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:55:47 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "BDempki", "password" => "[FILTERED]", "session" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'BDempki' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 204ms (Views: 0.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:57:49 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "BDempki", "password" => "[FILTERED]", "session" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'BDempki' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 192ms (Views: 0.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:58:43 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "BDempki", "password" => "[FILTERED]", "session" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'BDempki' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 195ms (Views: 0.9ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 10:58:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 211ms (Views: 0.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2025-09-01 11:00:12 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "Gary", "last_name" => "Johnson", "user_name" => "GJohnson", "email" => "[FILTERED]", "phone_number" => "7758563214", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'GJohnson123@gmail.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('Gary', 'Johnson', 'GJohnson', 'GJohnson123@gmail.com', '7758563214', '$2a$12$XTFr8jdntlW3OhCdVshlgOvVYdAeBGIMsqZYW.fcCVhEcb0hKHGD6', '2025-09-01 18:00:12.563098', '2025-09-01 18:00:12.563098') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 203ms (Views: 0.6ms | ActiveRecord: 5.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 11:00:39 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "GJohnson", "password" => "[FILTERED]", "session" => {"user_name" => "GJohnson", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'GJohnson' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 193ms (Views: 0.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 11:02:16 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "GJohnson", "password" => "[FILTERED]", "session" => {"user_name" => "GJohnson", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'GJohnson' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 193ms (Views: 0.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-01 11:02:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "GJohnson", "password" => "[FILTERED]", "session" => {"user_name" => "GJohnson", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'GJohnson' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 197ms (Views: 0.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
