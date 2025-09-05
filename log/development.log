@@ -822,3 +822,250 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 197ms (Views: 0.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/users" for ::1 at 2025-09-04 21:57:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 22:51:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 22:51:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 22:51:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:15:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:21:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:22:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:23:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 127.0.0.1 at 2025-09-04 23:37:14 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 200ms (Views: 39.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/icon.png" for 127.0.0.1 at 2025-09-04 23:37:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started POST "/users" for ::1 at 2025-09-04 23:37:40 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "1", "last_name" => "1", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'qw@qawe.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('1', '1', '1', 'qw@qawe.com', '987654321', '$2a$12$H8kceGEvGiUycjQ3ZMej5Oh0VPTkV10mOIKHp7.3.HLkLK5QD6QYa', '2025-09-05 06:37:41.190263', '2025-09-05 06:37:41.190263') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 27.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+Caused by: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+
+Information for: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+
+Information for cause: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-04 23:37:45 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "1", "last_name" => "1", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'qw@qawe.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('1', '1', '1', 'qw@qawe.com', '987654321', '$2a$12$l0DECq/ubNYESwPd5sg4wOZMtEgKcysJTxcYS85VGLy2ZBvvBMyLC', '2025-09-05 06:37:46.155508', '2025-09-05 06:37:46.155508') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 4.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+Caused by: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+
+Information for: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+
+Information for cause: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-04 23:37:51 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "1", "last_name" => "1", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'qw@qawe.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('1', '1', '1', 'qw@qawe.com', '987654321', '$2a$12$/UTbk93rYUrkzoBNPMoFbeW..tWBb3kbo7cmRTMY9fTzFsmCgzsq.', '2025-09-05 06:37:51.761197', '2025-09-05 06:37:51.761197') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 5.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+Caused by: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+
+Information for: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+
+Information for cause: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-04 23:39:26 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "1", "last_name" => "1", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'qw@qawe.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('1', '1', '1', 'qw@qawe.com', '987654321', '$2a$12$pfbVzzC3IUTsAjvdNEnH1uyoA3CE7aS5PYP.muaOo1s9L6zAY4Zxe', '2025-09-05 06:39:26.811543', '2025-09-05 06:39:26.811543') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+Caused by: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+
+Information for: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+
+Information for cause: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-04 23:40:25 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "1", "last_name" => "1", "user_name" => "1", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (4.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'qw@qawe.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('1', '1', '1', 'qw@qawe.com', '987654321', '$2a$12$emDnc9/usUagA7qYP9rcCOQeHj55go0ZOm6XzDeHHiXQr3R2tn8M.', '2025-09-05 06:40:25.974169', '2025-09-05 06:40:25.974169') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 5.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+Caused by: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+)
+
+Information for: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+
+Information for cause: PG::UniqueViolation (ERROR:  duplicate key value violates unique constraint "users_user_name_key"
+DETAIL:  Key (user_name)=(1) already exists.
+):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started GET "/users" for ::1 at 2025-09-04 23:40:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:41:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/favicon.ico" for ::1 at 2025-09-04 23:41:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2025-09-04 23:41:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2025-09-04 23:41:43 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"first_name" => "LOGAN", "last_name" => "STOLTZ", "dob" => "2025-01-28", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-04 23:43:33 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"first_name" => "LOGAN", "last_name" => "STOLTZ", "dob" => "2025-01-28", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started GET "/users" for ::1 at 2025-09-04 23:43:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
