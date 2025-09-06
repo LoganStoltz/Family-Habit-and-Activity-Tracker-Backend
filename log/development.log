@@ -1069,3 +1069,770 @@ Started GET "/users" for ::1 at 2025-09-04 23:43:36 -0700
   
 ActionController::RoutingError (No route matches [GET] "/users"):
   
+Started GET "/users" for ::1 at 2025-09-05 06:32:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (18.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2025-09-05 06:32:26 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"first_name" => "q", "last_name" => "q", "dob" => "2025-09-09", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 103ms (ActiveRecord: 271.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:36:45 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"user_id" => nil, "first_name" => "a", "last_name" => "a", "dob" => "2025-09-03", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:37:38 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"user_id" => nil, "first_name" => "a", "last_name" => "a", "dob" => "2025-09-03", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:37:46 -0700
+Processing by UsersController#create as */*
+  Parameters: {"profiles" => {"user_id" => nil, "first_name" => "a", "last_name" => "a", "dob" => "2025-09-03", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:39:07 -0700
+Processing by UsersController#create as */*
+  Parameters: {"users" => {"user_id" => nil}, "profiles" => {"first_name" => "a", "last_name" => "a", "dob" => "2025-09-09", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/login" for ::1 at 2025-09-05 06:39:30 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "GJohnson", "password" => "[FILTERED]", "session" => {"user_name" => "GJohnson", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (249.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'GJohnson' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 636ms (Views: 0.8ms | ActiveRecord: 269.6ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2025-09-05 06:39:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2025-09-05 06:39:46 -0700
+Processing by UsersController#create as */*
+  Parameters: {"users" => {"user_id" => nil}, "profiles" => {"first_name" => "a", "last_name" => "a", "dob" => "2025-09-11", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:39:51 -0700
+Processing by UsersController#create as */*
+  Parameters: {"users" => {"user_id" => nil}, "profiles" => {"first_name" => "a", "last_name" => "a", "dob" => "2025-09-11", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/users" for ::1 at 2025-09-05 06:40:01 -0700
+Processing by UsersController#create as */*
+  Parameters: {"users" => {"user_id" => nil}, "profiles" => {"first_name" => "a", "last_name" => "a", "dob" => "2025-09-11", "type" => "Baby"}, "user" => {}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started POST "/login" for ::1 at 2025-09-05 06:42:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "GJohnson", "password" => "[FILTERED]", "session" => {"user_name" => "GJohnson", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'GJohnson' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 335ms (Views: 0.9ms | ActiveRecord: 21.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2025-09-05 06:42:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:42:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:42:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2025-09-05 06:43:23 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {}, "profiles" => {"first_name" => "a", "last_name" => "a", "dob" => "2025-09-10", "type" => "Baby"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#user_params'
+app/controllers/users_controller.rb:3:in 'UsersController#create'
+Started GET "/users" for ::1 at 2025-09-05 06:44:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:44:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:44:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:44:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:44:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:45:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/favicon.ico" for ::1 at 2025-09-05 06:45:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:46:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 06:46:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/" for ::1 at 2025-09-05 06:46:54 -0700
+Processing by Rails::WelcomeController#index as */*
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 73ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-05 06:47:11 -0700
+Processing by Rails::WelcomeController#index as */*
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-05 06:48:09 -0700
+Processing by Rails::WelcomeController#index as */*
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-05 06:48:13 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/icon.png" for ::1 at 2025-09-05 06:48:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:48:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 06:48:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/users" for ::1 at 2025-09-05 06:50:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 06:50:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/users/6/profiles" for ::1 at 2025-09-05 06:51:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/6/profiles"):
+  
+Started GET "/users/6/profiles" for ::1 at 2025-09-05 06:52:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/6/profiles"):
+  
+Started GET "/users/6/profiles" for ::1 at 2025-09-05 06:52:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/6/profiles"):
+  
+Started POST "/profiles" for ::1 at 2025-09-05 06:52:47 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profiles"):
+  
+Started POST "/users" for ::1 at 2025-09-05 06:54:15 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user" => {"first_name" => "REBECCA", "last_name" => "STOLTZ", "user_name" => "a", "email" => "[FILTERED]", "phone_number" => "987654321", "password" => "[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Exists? (6.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'asd@asd.com' LIMIT 1 /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (52.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "created_at", "updated_at") VALUES ('REBECCA', 'STOLTZ', 'a', 'asd@asd.com', '987654321', '$2a$12$hfTLKrC3mnk25i4TJ2pVY.k4wIV24nCQK1k.gtnXV2sdy08haNOnG', '2025-09-05 13:54:15.854185', '2025-09-05 13:54:15.854185') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 201 Created in 378ms (Views: 0.9ms | ActiveRecord: 68.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/profile-select" for ::1 at 2025-09-05 06:57:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profile-select"):
+  
+Started POST "/profiles" for ::1 at 2025-09-05 06:57:58 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profiles"):
+  
+Started GET "/profile-select" for ::1 at 2025-09-05 06:58:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profile-select"):
+  
+Started GET "/profile-select" for ::1 at 2025-09-05 07:00:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profile-select"):
+  
+Started GET "/profile-select" for ::1 at 2025-09-05 07:00:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profile-select"):
+  
+Started GET "/profiles?userID=6" for ::1 at 2025-09-05 07:01:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 07:01:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started POST "/login" for ::1 at 2025-09-05 18:42:56 -0700
+Started POST "/login" for ::1 at 2025-09-05 18:42:56 -0700
+Started POST "/login" for ::1 at 2025-09-05 18:42:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/login" for ::1 at 2025-09-05 18:42:57 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "BDempki", "password" => "[FILTERED]", "session" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "BDempki", "password" => "[FILTERED]", "session" => {"user_name" => "BDempki", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'BDempki' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (205.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'BDempki' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 786ms (Views: 1.0ms | ActiveRecord: 27.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 940ms (Views: 0.8ms | ActiveRecord: 212.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-05 18:43:07 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 207ms (Views: 0.8ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/profiles" for ::1 at 2025-09-05 18:43:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 20:13:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started POST "/login" for ::1 at 2025-09-05 20:13:20 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (116.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 309ms (Views: 0.9ms | ActiveRecord: 124.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/profiles" for ::1 at 2025-09-05 20:13:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 20:14:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/profiles" for ::1 at 2025-09-05 21:03:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:09:57 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 424ms (Views: 49.2ms | ActiveRecord: 22.0ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:10:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 215ms (Views: 8.4ms | ActiveRecord: 132.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/undefined/profiles" for ::1 at 2025-09-05 21:11:08 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = NULL LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'="undefined"):
+  
+app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+Started POST "/profiles" for ::1 at 2025-09-05 21:15:06 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profiles"):
+  
+Started POST "/login" for ::1 at 2025-09-05 21:20:18 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (223.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 419ms (Views: 0.9ms | ActiveRecord: 232.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:20:22 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:20:41 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:21:40 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:24:31 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:24:34 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:26:44 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:26:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 52ms (Views: 3.8ms | ActiveRecord: 16.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-09-05 21:27:09 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "lstoltz", "password" => "[FILTERED]", "session" => {"user_name" => "lstoltz", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'lstoltz' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 206ms (Views: 0.7ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:27:19 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:26:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/profiles" for ::1 at 2025-09-05 21:28:22 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profiles"):
+  
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:28:27 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:26:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:29:03 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:26:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:32:44 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 25ms (Views: 5.1ms | ActiveRecord: 6.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:33:00 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:34:01 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:34:07 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:34:08 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:35:23 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:35:37 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:37:06 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:37:11 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:37:42 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/$%7BuserId%7D/profiles" for ::1 at 2025-09-05 21:37:51 -0700
+Processing by ProfilesController#index as HTML
+  Parameters: {"user_id" => "${userId}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = NULL LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'="${userId}"):
+  
+app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+Started GET "/favicon.ico" for ::1 at 2025-09-05 21:37:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:38:47 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:39:01 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:39:07 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:39:33 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:39:42 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2025-09-05 21:40:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:40:30 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:48:04 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (199.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 207ms (Views: 2.9ms | ActiveRecord: 208.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:48:09 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:50:03 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/profiles" for ::1 at 2025-09-05 21:50:39 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profiles"):
+  
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:52:00 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:52:15 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:52:19 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:52:19 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/1/profiles" for ::1 at 2025-09-05 21:52:23 -0700
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:25:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:6:in 'ProfilesController#index'
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
