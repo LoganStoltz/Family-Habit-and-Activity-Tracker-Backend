@@ -15,7 +15,36 @@ class ProfilesController < ApplicationController
   def create
     profile = @user.profiles.new(profile_params)
     if profile.save
-      render json: { profile: profile }, status: :created
+      default_habits = case profile.profile_type
+        when 'Baby'
+          [
+            { name: 'Diaper Change', description: 'Change diaper', goal_type: 'Daily', goal_value: 8 },
+            { name: 'Feeding', description: 'Feed baby', goal_type: 'Daily', goal_value: 6 },
+            { name: 'Bathe', description: 'Bathe baby', goal_type: 'Weekly', goal_value: 5 },
+            { name: 'Nap', description: 'Nap time', goal_type: 'Daily', goal_value: 3 }
+          ]
+        when 'Adult'
+          [
+            { name: 'Drink Water', description: 'Stay hydrated', goal_type: 'Daily', goal_value: 8 },
+            { name: 'Exercise', description: 'Physical activity', goal_type: 'Daily', goal_value: 1 },
+            { name: 'Meals', description: 'Full meals', goal_type: 'Daily', goal_value: 3 }
+          ]
+        else
+          []
+        end
+      habit_errors = []
+      default_habits.each do |habit_attrs|
+        habit = profile.habits.create(habit_attrs)
+        unless habit.persisted?
+          habit_errors << habit.errors.full_messages
+          Rails.logger.error "Failed to create habit: #{habit_attrs[:name]} - #{habit.errors.full_messages.join(', ')}"
+        end
+      end
+      if habit_errors.any?
+        render json: { profile: profile, habit_errors: habit_errors }, status: :created
+      else
+        render json: { profile: profile }, status: :created
+      end
     else
       render json: { errors: profile.errors.full_messages }, status: :unprocessable_entity
     end

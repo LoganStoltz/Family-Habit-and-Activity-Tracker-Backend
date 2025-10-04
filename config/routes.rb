@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :habits, only: [] do
+  resources :habits, only: [:show, :update, :destroy] do
     resources :logs, only: [:index]
     resources :habit_logs, only: [:index, :create]
   end

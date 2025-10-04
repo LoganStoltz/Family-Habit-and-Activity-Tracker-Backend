@@ -10,9 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 20250831) do
+ActiveRecord::Schema[8.0].define(version: 20251003) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "life_stage", ["Baby", "Adult"]
+
+  create_table "habit_logs", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
+    t.bigint "habit_id"
+    t.date "log_date"
+    t.text "notes"
+    t.date "date_completed"
+    t.bigint "amount"
+    t.string "change_type"
+    t.timestamptz "created_at"
+    t.timestamptz "updated_at"
+  end
+
+  create_table "habits", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
+    t.bigint "profile_id"
+    t.string "goal_type"
+    t.text "goal_value"
+    t.string "name"
+    t.text "description"
+    t.boolean "completed", default: false
+    t.date "date_completed"
+  end
+
+  create_table "profiles", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.date "dob"
+    t.enum "profile_type", enum_type: "life_stage"
+    t.check_constraint "dob <= CURRENT_DATE", name: "check_dob"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -24,5 +58,11 @@ ActiveRecord::Schema[8.0].define(version: 20250831) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.unique_constraint ["email"], name: "users_email_key"
+    t.unique_constraint ["user_name"], name: "users_user_name_key"
   end
+
+  add_foreign_key "habit_logs", "habits", name: "habit_logs_habit_id_fkey"
+  add_foreign_key "habits", "profiles", name: "habits_profile_id_fkey"
+  add_foreign_key "profiles", "users", name: "profiles_user_id_fkey"
 end

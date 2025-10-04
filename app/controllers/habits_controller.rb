@@ -1,5 +1,14 @@
 class HabitsController < ApplicationController
-  before_action :set_profile
+  before_action :set_profile, only: [:index, :create]
+
+  def update
+    habit = Habit.find(params[:id])
+    if habit.update(habit_params)
+      render json: habit
+    else
+      render json: { error: habit.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 
   def index
     habits = @profile.habits
