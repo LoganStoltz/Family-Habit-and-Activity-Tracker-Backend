@@ -18,15 +18,15 @@ class ProfilesController < ApplicationController
       default_habits = case profile.profile_type
         when 'Baby'
           [
-            { name: 'Diaper Change', description: 'Change diaper', goal_type: 'Daily', goal_value: 8 },
-            { name: 'Feeding', description: 'Feed baby', goal_type: 'Daily', goal_value: 6 },
+            { name: 'Diaper Change', description: 'Change diaper', goal_type: 'Daily'},
+            { name: 'Feeding', description: 'Feed baby', goal_type: 'Daily'},
             { name: 'Bathe', description: 'Bathe baby', goal_type: 'Weekly', goal_value: 5 },
-            { name: 'Nap', description: 'Nap time', goal_type: 'Daily', goal_value: 3 }
+            { name: 'Nap', description: 'Nap time', goal_type: 'Daily'}
           ]
         when 'Adult'
           [
-            { name: 'Drink Water', description: 'Stay hydrated', goal_type: 'Daily', goal_value: 8 },
-            { name: 'Exercise', description: 'Physical activity', goal_type: 'Daily', goal_value: 1 },
+            { name: 'Drink Water', description: 'Stay hydrated', goal_type: 'Daily', goal_value: 88 },
+            { name: 'Exercise', description: 'Physical activity', goal_type: 'Weekly', goal_value: 5 },
             { name: 'Meals', description: 'Full meals', goal_type: 'Daily', goal_value: 3 }
           ]
         else

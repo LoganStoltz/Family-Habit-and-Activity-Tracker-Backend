@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 20251003) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   # Custom types defined in this database.
   # Note that some types may not work with other database engines. Be careful if changing database.
   create_enum "life_stage", ["Baby", "Adult"]
+
+  create_table "completed_habits", force: :cascade do |t|
+    t.bigint "habit_id"
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "date_completed"
+    t.index ["habit_id"], name: "index_completed_habits_on_habit_id"
+  end
 
   create_table "habit_logs", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "habit_id"
@@ -62,6 +69,7 @@ ActiveRecord::Schema[8.0].define(version: 20251003) do
     t.unique_constraint ["user_name"], name: "users_user_name_key"
   end
 
+  add_foreign_key "completed_habits", "habits"
   add_foreign_key "habit_logs", "habits", name: "habit_logs_habit_id_fkey"
   add_foreign_key "habits", "profiles", name: "habits_profile_id_fkey"
   add_foreign_key "profiles", "users", name: "profiles_user_id_fkey"

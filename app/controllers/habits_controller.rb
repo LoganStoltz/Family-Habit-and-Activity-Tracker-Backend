@@ -1,5 +1,5 @@
 class HabitsController < ApplicationController
-  before_action :set_profile, only: [:index, :create]
+  before_action :set_profile, :current_user, only: [:index, :create]
 
   def update
     habit = Habit.find(params[:id])
@@ -24,9 +24,23 @@ class HabitsController < ApplicationController
     end
   end
 
+  def destroy
+  habit = Habit.find_by(id: params[:id])
+  if habit
+    habit.destroy
+    render json: { success: true }
+  else
+    render json: { error: "Habit not found" }, status: :not_found
+  end
+end
+
   private
   def set_profile
     @profile = Profile.find(params[:profile_id])
+  end
+
+  def current_user
+    @current_user ||= User.find(params[:user_id])
   end
 
   def habit_params

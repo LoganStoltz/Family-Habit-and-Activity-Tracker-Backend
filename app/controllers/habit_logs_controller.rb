@@ -8,7 +8,7 @@ class HabitLogsController < ApplicationController
   def create
     habit = Habit.find(params[:habit_id])
     # Prevent logging if habit is already complete
-    if habit.completed
+    if habit.goal_value.present? && habit.completed
       render json: { error: 'Habit is already complete. No further logs allowed.' }, status: :forbidden
       return
     end
@@ -16,7 +16,7 @@ class HabitLogsController < ApplicationController
     log = habit.habit_logs.new(log_params)
     if log.save
       # Check if habit goal is met after saving log
-      if habit_goal_met?(habit)
+      if habit.goal_value.present? && habit_goal_met?(habit)
         habit.update(completed: true, date_completed: Date.today)
       end
       render json: log, status: :created
@@ -27,7 +27,7 @@ class HabitLogsController < ApplicationController
 
   private
   def log_params
-    params.require(:habit_log).permit(:log_date, :completed, :date_completed, :notes, :amount, :change_type)
+    params.require(:habit_log).permit(:log_date, :notes, :amount)
   end
 
   # Helper to check if habit goal is met
