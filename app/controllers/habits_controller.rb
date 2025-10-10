@@ -44,6 +44,6 @@ end
   end
 
   def habit_params
-    params.require(:habit).permit(:name, :description, :goal_type, :goal_value)
+    params.require(:habit).permit(:name, :description)
   end
 end

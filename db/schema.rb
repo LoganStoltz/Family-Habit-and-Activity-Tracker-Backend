@@ -18,32 +18,20 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
   # Note that some types may not work with other database engines. Be careful if changing database.
   create_enum "life_stage", ["Baby", "Adult"]
 
-  create_table "completed_habits", force: :cascade do |t|
-    t.bigint "habit_id"
-    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.datetime "date_completed"
-    t.index ["habit_id"], name: "index_completed_habits_on_habit_id"
-  end
-
   create_table "habit_logs", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "habit_id"
+    t.bigint "profile_id"
     t.date "log_date"
     t.text "notes"
-    t.date "date_completed"
-    t.bigint "amount"
-    t.string "change_type"
+    t.jsonb "extra_data", default: {}, null: false
     t.timestamptz "created_at"
     t.timestamptz "updated_at"
   end
 
   create_table "habits", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "profile_id"
-    t.string "goal_type"
-    t.text "goal_value"
     t.string "name"
     t.text "description"
-    t.boolean "completed", default: false
-    t.date "date_completed"
   end
 
   create_table "profiles", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
