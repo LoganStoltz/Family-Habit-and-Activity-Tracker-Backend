@@ -44,6 +44,6 @@ end
   end
 
   def habit_params
-    params.require(:habit).permit(:name, :description)
+    params.require(:habit).permit(:profile_id, :name, :description, :category)
   end
 end

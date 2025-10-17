@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_16_224918) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -23,7 +23,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
     t.bigint "profile_id"
     t.date "log_date"
     t.text "notes"
-    t.jsonb "extra_data", default: {}, null: false
+    t.jsonb "extra_data"
     t.timestamptz "created_at"
     t.timestamptz "updated_at"
   end
@@ -32,6 +32,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
     t.bigint "profile_id"
     t.string "name"
     t.text "description"
+    t.string "category"
   end
 
   create_table "profiles", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
@@ -57,8 +58,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_08_012326) do
     t.unique_constraint ["user_name"], name: "users_user_name_key"
   end
 
-  add_foreign_key "completed_habits", "habits"
-  add_foreign_key "habit_logs", "habits", name: "habit_logs_habit_id_fkey"
+  add_foreign_key "habit_logs", "habits", name: "habits_logs_habit_id_fkey"
+  add_foreign_key "habit_logs", "profiles", name: "habits_logs_profile_id_fkey"
   add_foreign_key "habits", "profiles", name: "habits_profile_id_fkey"
   add_foreign_key "profiles", "users", name: "profiles_user_id_fkey"
 end
