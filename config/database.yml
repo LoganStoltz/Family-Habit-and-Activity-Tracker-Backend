@@ -3,23 +3,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: password
-  host: localhost
-  port: 5432
-  pool: 5
+  username: <%= ENV.fetch("PGUSER") { 'postgres' } %>
+  password: <%= ENV.fetch("PGPASSWORD") { 'password' } %>
+  host: <%= ENV.fetch("PGHOST") { '127.0.0.1' } %>
+  port: <%= ENV.fetch("PGPORT") { 5432 } %>
   
 development:
   <<: *default
   database: family_habit_development
-  username: postgres
-  password: password
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: postgres
-  password: postgres
-  database: test_db
-  port: 5432
+  <<: *default
+  database: <%= ENV.fetch("PGDATABASE") { 'family_habit_test' } %>
+  username: <%= ENV.fetch("PGUSER") { 'postgres' } %>
+  password: <%= ENV.fetch("PGPASSWORD") { 'postgres' } %>
