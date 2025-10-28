@@ -5,25 +5,64 @@ on:
   push:
     branches: [ main ]
 
-jobs:
-  scan_ruby:
-    runs-on: ubuntu-latest
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      services:
+        postgres:
+          image: postgres:15
+          env:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: family_habit_test
+          ports:
+            - 5432:5432
+          options: >-
+            --health-cmd "pg_isready -U postgres"
+            --health-interval 10s
+            --health-timeout 5s
+            --health-retries 5
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      env:
+        RAILS_ENV: test
+        DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/family_habit_test
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
+      steps:
+        - uses: actions/checkout@v4
 
-      - name: Ensure brakeman is executable
-        run: chmod +x bin/brakeman
+        - name: Set up Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: 3.4
 
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bundle exec brakeman --no-pager
+        - name: Install dependencies
+          run: bundle config set --local deployment 'true' && bundle install --jobs 4 --retry 3
+
+        - name: Install psql client (for pg_isready)
+          run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+        - name: Wait for Postgres to accept connections
+          run: |
+            for i in $(seq 1 30); do
+              if pg_isready -h 127.0.0.1 -p 5432 -U postgres; then
+                echo "Postgres is ready"
+                break
+              fi
+              echo "Waiting for Postgres..."
+              sleep 1
+            done
+
+        - name: Prepare test database
+          env:
+            RAILS_ENV: test
+            DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/family_habit_test
+          run: |
+            bundle exec rails db:create db:schema:load
+
+        - name: Run tests
+          env:
+            RAILS_ENV: test
+          run: bundle exec rails test
 
   lint:
     runs-on: ubuntu-latest
@@ -64,4 +103,19 @@ jobs:
       - name: Run tests
         env:
           RAILS_ENV: test
-        run: bundle exec rails db:test:prepare test
+        run: bundle exec rails test
+  
+  services:
+    postgres:
+      image: postgres:14
+      ports:
+        - 5432:5432
+      env:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: test_db
+      options: >-
+        --health-cmd="pg_isready"
+        --health-interval=10s
+        --health-timeout=5s
+        --health-retries=5

@@ -11,3 +11,19 @@ default: &default
 development:
   <<: *default
   database: family_habit_development
+
+# Add test config: prefer DATABASE_URL (CI), otherwise use sqlite in-memory to avoid failing when Postgres isn't available.
+<% if ENV['DATABASE_URL'] %>
+test:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV.fetch("PGDATABASE") { 'family_habit_test' } %>
+  username: <%= ENV.fetch("PGUSER") { 'postgres' } %>
+  password: <%= ENV.fetch("PGPASSWORD") { 'postgres' } %>
+<% else %>
+test:
+  adapter: sqlite3
+  database: ':memory:'
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+<% end %>
