@@ -12,7 +12,7 @@ class HabitLogsController < ApplicationController
     if log.save
       render json: log, status: :created
     else
-      render json: { error: log.errors.full_messages.join(', ') }, status: :unprocessable_entity
+      render json: { error: log.errors.full_messages.join(", ") }, status: :unprocessable_entity
     end
   end
 

@@ -7,18 +7,18 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :users, only: [:create] do
-    resources :profiles, only: [:index, :show, :create, :destroy] do
-      resources :habits, only: [:create, :index] do
-        resources :logs, only: [:index]
+  resources :users, only: [ :create ] do
+    resources :profiles, only: [ :index, :show, :create, :destroy ] do
+      resources :habits, only: [ :create, :index ] do
+        resources :logs, only: [ :index ]
       end
     end
   end
 
-  resources :habits, only: [:show, :update, :destroy] do
-    resources :logs, only: [:index]
-    resources :habit_logs, only: [:index, :create]
+  resources :habits, only: [ :show, :update, :destroy ] do
+    resources :logs, only: [ :index ]
+    resources :habit_logs, only: [ :index, :create ]
   end
 
-  post 'login', to: 'sessions#create'
+  post "login", to: "sessions#create"
 end

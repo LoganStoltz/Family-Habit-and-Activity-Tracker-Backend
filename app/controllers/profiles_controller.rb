@@ -1,10 +1,10 @@
 # app/controllers/profiles_controller.rb
 class ProfilesController < ApplicationController
   before_action :set_user
-  before_action :set_profile, only: [:show, :update, :destroy]
+  before_action :set_profile, only: [ :show, :update, :destroy ]
 
   def index
-    render json: @user.profiles 
+    render json: @user.profiles
   end
 
   def show
@@ -16,22 +16,22 @@ class ProfilesController < ApplicationController
     profile = @user.profiles.new(profile_params)
     if profile.save
       default_habits = case profile.profile_type
-        when 'Baby'
+      when "Baby"
           [
-            { name: 'Diaper Change', description: 'Change diaper'},
-            { name: 'Feeding', description: 'Feed baby'},
-            { name: 'Bathe', description: 'Bathe baby'},
-            { name: 'Nap', description: 'Nap time'}
+            { name: "Diaper Change", description: "Change diaper" },
+            { name: "Feeding", description: "Feed baby" },
+            { name: "Bathe", description: "Bathe baby" },
+            { name: "Nap", description: "Nap time" }
           ]
-        when 'Adult'
+      when "Adult"
           [
-            { name: 'Drink Water', description: 'Stay hydrated'},
-            { name: 'Exercise', description: 'Physical activity'},
-            { name: 'Meals', description: 'Full meals'}
+            { name: "Drink Water", description: "Stay hydrated" },
+            { name: "Exercise", description: "Physical activity" },
+            { name: "Meals", description: "Full meals" }
           ]
-        else
+      else
           []
-        end
+      end
       habit_errors = []
       default_habits.each do |habit_attrs|
         habit = profile.habits.create(habit_attrs)
@@ -67,7 +67,7 @@ class ProfilesController < ApplicationController
     end
   end
 
-  
+
   private
   def set_profile
     @profile = @user.profiles.find(params[:id])
@@ -78,6 +78,6 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.require(:profile).permit(:user_id,:first_name, :last_name, :user_name, :dob, :profile_type)
+    params.require(:profile).permit(:user_id, :first_name, :last_name, :user_name, :dob, :profile_type)
   end
 end

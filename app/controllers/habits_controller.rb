@@ -1,5 +1,5 @@
 class HabitsController < ApplicationController
-  before_action :set_profile, :current_user, only: [:index, :create]
+  before_action :set_profile, :current_user, only: [ :index, :create ]
 
   def update
     habit = Habit.find(params[:id])
@@ -20,7 +20,7 @@ class HabitsController < ApplicationController
     if habit.save
       render json: habit, status: :created
     else
-      render json: { error: habit.errors.full_messages.join(', ') }, status: :unprocessable_entity
+      render json: { error: habit.errors.full_messages.join(", ") }, status: :unprocessable_entity
     end
   end
 

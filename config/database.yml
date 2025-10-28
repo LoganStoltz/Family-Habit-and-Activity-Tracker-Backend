@@ -17,7 +17,13 @@ development:
 
 test:
   <<: *default
-  database: family_habit_test
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['PGDATABASE'] || 'family_habit_test' %>
+  username: <%= ENV['PGUSER'] || 'postgres' %>
+  password: <%= ENV['PGPASSWORD'] || 'postgres' %>
+  host: <%= ENV['PGHOST'] || '127.0.0.1' %>
+  port: <%= ENV['PGPORT'] || 5432 %>
 
 production:
   <<: *default

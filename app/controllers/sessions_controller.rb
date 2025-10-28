@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       render json: { user: user }, status: :ok
     else
-      render json: { errors: ["Invalid email/username or password"] }, status: :unauthorized
+      render json: { errors: [ "Invalid email/username or password" ] }, status: :unauthorized
     end
   end
 end
