@@ -11,9 +11,3 @@ default: &default
 development:
   <<: *default
   database: family_habit_development
-
-test:
-  <<: *default
-  database: <%= ENV.fetch("PGDATABASE") { 'family_habit_test' } %>
-  username: <%= ENV.fetch("PGUSER") { 'postgres' } %>
-  password: <%= ENV.fetch("PGPASSWORD") { 'postgres' } %>
