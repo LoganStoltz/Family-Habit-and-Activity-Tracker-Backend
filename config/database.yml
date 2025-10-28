@@ -16,11 +16,10 @@ development:
   password: password
 
 test:
-  <<: *default
   adapter: postgresql
   encoding: unicode
-  host: 127.0.0.1
-  port: 5432
+  host: localhost
   username: postgres
   password: postgres
   database: test_db
+  port: 5432
