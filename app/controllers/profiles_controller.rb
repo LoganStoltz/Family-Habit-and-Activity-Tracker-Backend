@@ -18,16 +18,16 @@ class ProfilesController < ApplicationController
       default_habits = case profile.profile_type
       when "Baby"
           [
-            { name: "Diaper Change", description: "Change diaper" },
-            { name: "Feeding", description: "Feed baby" },
-            { name: "Bathe", description: "Bathe baby" },
-            { name: "Nap", description: "Nap time" }
+            { name: "Diaper Change", description: "Change diaper", category: "diaperChange" },
+            { name: "Feeding", description: "Feed baby", category: "feeding" },
+            { name: "Bathe", description: "Bathe baby", category: "babyBath" },
+            { name: "Nap", description: "Nap time", category: "sleeping" }
           ]
       when "Adult"
           [
-            { name: "Drink Water", description: "Stay hydrated" },
-            { name: "Exercise", description: "Physical activity" },
-            { name: "Meals", description: "Full meals" }
+            { name: "Drink Water", description: "Stay hydrated", category: "drinkingWater" },
+            { name: "Exercise", description: "Physical activity", category: "exercise" },
+            { name: "Meals", description: "Full meals", category: "meals" }
           ]
       else
           []
