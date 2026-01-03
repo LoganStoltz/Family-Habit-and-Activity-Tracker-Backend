@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_16_224918) do
+ActiveRecord::Schema[8.0].define(version: 2026_01_02_000000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -33,6 +33,23 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_16_224918) do
     t.string "name"
     t.text "description"
     t.string "category"
+  end
+
+  create_table "milestones", force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.string "title", null: false
+    t.string "category"
+    t.datetime "occurred_at", null: false
+    t.string "mood"
+    t.text "notes"
+    t.text "tags"
+    t.boolean "favorite", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["occurred_at"], name: "index_milestones_on_occurred_at"
+    t.index ["profile_id", "category"], name: "index_milestones_on_profile_id_and_category"
+    t.index ["profile_id", "favorite"], name: "index_milestones_on_profile_id_and_favorite"
+    t.index ["profile_id"], name: "index_milestones_on_profile_id"
   end
 
   create_table "profiles", id: :bigint, default: -> { "nextval('users_id_seq'::regclass)" }, force: :cascade do |t|
@@ -61,5 +78,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_16_224918) do
   add_foreign_key "habit_logs", "habits", name: "habits_logs_habit_id_fkey"
   add_foreign_key "habit_logs", "profiles", name: "habits_logs_profile_id_fkey"
   add_foreign_key "habits", "profiles", name: "habits_profile_id_fkey"
+  add_foreign_key "milestones", "profiles"
   add_foreign_key "profiles", "users", name: "profiles_user_id_fkey"
 end

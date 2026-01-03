@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       resources :habits, only: [ :create, :index ] do
         resources :logs, only: [ :index ]
       end
+
+      resources :milestones, only: [ :index, :create ]
     end
   end
 
@@ -19,6 +21,8 @@ Rails.application.routes.draw do
     resources :logs, only: [ :index ]
     resources :habit_logs, only: [ :index, :create ]
   end
+
+  resources :milestones, only: [ :show, :update, :destroy ]
 
   post "login", to: "sessions#create"
 end
