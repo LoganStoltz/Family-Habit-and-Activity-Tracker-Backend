@@ -15360,3 +15360,1560 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 211ms (Views: 0.6ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/login" for ::1 at 2026-01-12 23:20:14 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (211.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 442ms (Views: 2.9ms | ActiveRecord: 220.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-01-12 23:22:06 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 200ms (Views: 0.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles" for ::1 at 2026-01-12 23:22:10 -0800
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "622"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:77:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 622 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles" for ::1 at 2026-01-12 23:22:13 -0800
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "622"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:77:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 622 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-01-12 23:23:20 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 206ms (Views: 1.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-01-12 23:24:15 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 206ms (Views: 0.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles" for ::1 at 2026-01-12 23:24:20 -0800
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "622"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:77:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 622 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-01-12 23:24:58 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 205ms (Views: 0.7ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles" for ::1 at 2026-01-12 23:25:05 -0800
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "622"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:77:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 622 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2026-01-12 23:25:41 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"user_name" => "TESTER", "password" => "[FILTERED]", "session" => {"user_name" => "TESTER", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'TESTER' LIMIT 1 /*action='create',application='Backend',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:3:in 'SessionsController#create'
+Completed 200 OK in 197ms (Views: 0.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles" for ::1 at 2026-01-12 23:25:43 -0800
+Processing by ProfilesController#index as */*
+  Parameters: {"user_id" => "622"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:77:in 'ProfilesController#set_user'
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = 622 /*action='index',application='Backend',controller='profiles'*/[0m
+  ↳ app/controllers/profiles_controller.rb:7:in 'ProfilesController#index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/milestones" for ::1 at 2026-01-12 23:26:00 -0800
+Processing by MilestonesController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "milestone" => {}}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='milestones'*/[0m
+  ↳ app/controllers/milestones_controller.rb:39:in 'MilestonesController#set_profile'
+  [1m[36mMilestone Load (2.7ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" WHERE "milestones"."profile_id" = 693 ORDER BY "milestones"."occurred_at" DESC /*action='index',application='Backend',controller='milestones'*/[0m
+  ↳ app/controllers/milestones_controller.rb:7:in 'MilestonesController#index'
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 3.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-12 23:26:01 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (1.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 2.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-12 23:26:01 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (1.7ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitsController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "habit" => {}}
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 11ms (Views: 3.1ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.7ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.5ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-12 23:26:01 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-12 23:26:02 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.5ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/milestones" for ::1 at 2026-01-12 23:26:10 -0800
+Processing by MilestonesController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "milestone" => {}}
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='milestones'*/[0m
+  ↳ app/controllers/milestones_controller.rb:39:in 'MilestonesController#set_profile'
+  [1m[36mMilestone Load (0.4ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" WHERE "milestones"."profile_id" = 693 ORDER BY "milestones"."occurred_at" DESC /*action='index',application='Backend',controller='milestones'*/[0m
+  ↳ app/controllers/milestones_controller.rb:7:in 'MilestonesController#index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:19:08 -0800
+Started GET "/users/622/profiles/693/milestones" for ::1 at 2026-01-13 23:19:08 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/622/profiles/693/milestones"):
+  
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (1.0ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 795ms (Views: 99.1ms | ActiveRecord: 119.2ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:19:10 -0800
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+Processing by HabitsController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "habit" => {}}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:19:10 -0800
+  [1m[36mHabitLog Load (1.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 41ms (Views: 8.4ms | ActiveRecord: 12.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:19:10 -0800
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+Processing by HabitsController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "habit" => {}}
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (2.0ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 3.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:19:10 -0800
+  [1m[36mHabit Load (77.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (1.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 88ms (Views: 5.5ms | ActiveRecord: 88.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (1.2ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.8ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (1.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabitLog Load (1.6ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.5ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:19:11 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabitLog Load (3.1ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 3.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (4.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabit Load (3.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (3.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 17ms (Views: 4.5ms | ActiveRecord: 7.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabitLog Load (4.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 7.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabitLog Load (2.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 2.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabit Load (3.9ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabitLog Load (1.1ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 5.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabit Load (2.7ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 3.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabitLog Load (0.8ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabit Load (3.8ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 4.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabitLog Load (2.1ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mHabit Load (4.2ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 21ms (Views: 6.8ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:19:12 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:19:13 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:19:13 -0800
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:19:13 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.5ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:19:13 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:26:17 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (89.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (1.1ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 103ms (Views: 3.2ms | ActiveRecord: 99.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:26:17 -0800
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:26:17 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+Processing by HabitsController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "habit" => {}}
+  [1m[36mHabitLog Load (1.9ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:26:17 -0800
+  [1m[36mProfile Load (101.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (1.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 122ms (Views: 4.7ms | ActiveRecord: 116.7ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (1.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:26:17 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:26:17 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (1.0ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.5ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.8ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:26:18 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:26:19 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:26:19 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/habits/731/habit_logs" for ::1 at 2026-01-13 23:28:38 -0800
+Processing by HabitLogsController#create as */*
+  Parameters: {"habit_log" => {"habit_id" => 731, "profile_id" => 693, "log_date" => "2026-01-14", "notes" => "", "extra_data" => {}}, "habit_id" => "731"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:9:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mHabitLog Create (25.6ms)[0m  [1m[32mINSERT INTO "habit_logs" ("habit_id", "profile_id", "log_date", "notes", "extra_data", "created_at", "updated_at") VALUES (731, 693, '2026-01-14', '', '{}', '2026-01-14 07:28:38.566066', '2026-01-14 07:28:38.566066') RETURNING "id" /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+Completed 201 Created in 37ms (Views: 0.6ms | ActiveRecord: 27.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:28:38 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:28:38 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:28:38 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:28:38 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:28:39 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#create as */*
+  Parameters: {"habit_log" => {"habit_id" => 731, "profile_id" => 693, "log_date" => "2026-01-14", "notes" => "", "extra_data" => {}}, "habit_id" => "731"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:9:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mHabitLog Create (3.4ms)[0m  [1m[32mINSERT INTO "habit_logs" ("habit_id", "profile_id", "log_date", "notes", "extra_data", "created_at", "updated_at") VALUES (731, 693, '2026-01-14', '', '{}', '2026-01-14 07:32:41.369725', '2026-01-14 07:32:41.369725') RETURNING "id" /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+Completed 201 Created in 13ms (Views: 0.7ms | ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:41 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:32:42 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:32:42 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.6ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:32:42 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:32:42 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:32:42 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:43 -0800
+Processing by HabitLogsController#create as */*
+  Parameters: {"habit_log" => {"habit_id" => 731, "profile_id" => 693, "log_date" => "2026-01-14", "notes" => "", "extra_data" => {}}, "habit_id" => "731"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:9:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mHabitLog Create (3.0ms)[0m  [1m[32mINSERT INTO "habit_logs" ("habit_id", "profile_id", "log_date", "notes", "extra_data", "created_at", "updated_at") VALUES (731, 693, '2026-01-14', '', '{}', '2026-01-14 07:32:44.026099', '2026-01-14 07:32:44.026099') RETURNING "id" /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+Completed 201 Created in 12ms (Views: 0.6ms | ActiveRecord: 3.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:32:44 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:32:45 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:32:45 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/habits/703/habit_logs" for ::1 at 2026-01-13 23:33:50 -0800
+Processing by HabitLogsController#create as */*
+  Parameters: {"habit_log" => {"habit_id" => 703, "profile_id" => 693, "log_date" => "2026-01-14", "notes" => "", "extra_data" => {"duration" => 0}}, "habit_id" => "703"}
+  [1m[36mHabit Load (0.5ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:9:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mHabitLog Create (3.7ms)[0m  [1m[32mINSERT INTO "habit_logs" ("habit_id", "profile_id", "log_date", "notes", "extra_data", "created_at", "updated_at") VALUES (703, 693, '2026-01-14', '', '{"duration":0}', '2026-01-14 07:33:50.551822', '2026-01-14 07:33:50.551822') RETURNING "id" /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:12:in 'HabitLogsController#create'
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:33:50 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.6ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:33:50 -0800
+Processing by HabitsController#index as */*
+  Parameters: {"user_id" => "622", "profile_id" => "693"}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:33:50 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:33:50 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:33:51 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/622/profiles/693/habits" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitsController#index as JSON
+  Parameters: {"user_id" => "622", "profile_id" => "693", "habit" => {}}
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = 693 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:39:in 'HabitsController#set_profile'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 622 LIMIT 1 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:43:in 'HabitsController#current_user'
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."profile_id" = 693 /*action='index',application='Backend',controller='habits'*/[0m
+  ↳ app/controllers/habits_controller.rb:15:in 'HabitsController#index'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/715/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "715"}
+  [1m[36mHabit Load (0.4ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 715 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 715 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/716/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "716"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 716 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 716 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/719/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "719"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 719 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.4ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 719 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/731/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "731"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 731 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 731 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/695/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "695"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 695 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 695 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/696/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "696"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 696 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 696 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/697/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "697"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 697 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 697 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/702/habit_logs" for ::1 at 2026-01-13 23:33:54 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "702"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 702 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.2ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 702 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/habits/703/habit_logs" for ::1 at 2026-01-13 23:33:55 -0800
+Processing by HabitLogsController#index as */*
+  Parameters: {"habit_id" => "703"}
+  [1m[36mHabit Load (0.3ms)[0m  [1m[34mSELECT "habits".* FROM "habits" WHERE "habits"."id" = 703 LIMIT 1 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:3:in 'HabitLogsController#index'
+  [1m[36mHabitLog Load (0.3ms)[0m  [1m[34mSELECT "habit_logs".* FROM "habit_logs" WHERE "habit_logs"."habit_id" = 703 /*action='index',application='Backend',controller='habit_logs'*/[0m
+  ↳ app/controllers/habit_logs_controller.rb:5:in 'HabitLogsController#index'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
