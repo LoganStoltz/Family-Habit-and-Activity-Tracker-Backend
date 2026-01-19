@@ -16,6 +16,17 @@ class HabitLogsController < ApplicationController
     end
   end
 
+  def destroy
+    habit = Habit.find(params[:habit_id])
+    log = habit.habit_logs.find(params[:id])
+    
+    if log.destroy
+      render json: { message: "Log deleted successfully" }, status: :ok
+    else
+      render json: { error: "Failed to delete log" }, status: :unprocessable_entity
+    end
+  end
+
   private
   def log_params
     params.require(:habit_log).permit(:habit_id, :profile_id, :log_date, :notes, extra_data: {})
