@@ -29,6 +29,6 @@ class HabitLogsController < ApplicationController
 
   private
   def log_params
-    params.require(:habit_log).permit(:habit_id, :profile_id, :log_date, :notes, extra_data: {})
+    params.require(:habit_log).permit(:habit_id, :profile_id, :log_date, :notes, extra_data: {}, created_at: [], updated_at: [])
   end
 end
