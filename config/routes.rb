@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   resources :habits, only: [ :show, :update, :destroy ] do
     resources :logs, only: [ :index ]
-    resources :habit_logs, only: [ :index, :create, :destroy ]
+    resources :habit_logs, only: [ :index, :create, :update, :destroy ]
   end
 
   resources :milestones, only: [ :show, :update, :destroy ]

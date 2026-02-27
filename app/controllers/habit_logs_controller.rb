@@ -16,6 +16,17 @@ class HabitLogsController < ApplicationController
     end
   end
 
+  def update
+    habit = Habit.find(params[:habit_id])
+    log = habit.habit_logs.find(params[:id])
+
+    if log.update(log_params)
+      render json: log, status: :ok
+    else
+      render json: { error: log.errors.full_messages.join(", ") }, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     habit = Habit.find(params[:habit_id])
     log = habit.habit_logs.find(params[:id])
@@ -29,6 +40,6 @@ class HabitLogsController < ApplicationController
 
   private
   def log_params
-    params.require(:habit_log).permit(:habit_id, :profile_id, :log_date, :notes, extra_data: {}, created_at: [], updated_at: [])
+    params.require(:habit_log).permit(:profile_id, :log_date, :notes, extra_data: {})
   end
 end
